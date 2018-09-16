@@ -15,7 +15,7 @@ Features:
 
 
 
-# Configuration
+## Configuration
 There are overal 4 different configuration files which are handled in YAML. These configuration files are very easy to customise. The 4 files included in the plugin:
 
 - Locations.yml
@@ -23,8 +23,9 @@ There are overal 4 different configuration files which are handled in YAML. Thes
 - Kits.yml
 - Config.yml
 
-Kits.yml
+### Kits.yml
 ```
+
 {key}:
    permission: {permission}
    icon:
@@ -33,8 +34,8 @@ Kits.yml
      slot: {integer}
      amount: {integer}
      subID: {short}
-     lore: #StringList
-     - {string}
+     lore:
+     - '{string}'
    items:
      '{id}':
         name: '{string}'
@@ -42,8 +43,38 @@ Kits.yml
         slot: {integer}
         amount: {integer}
         subID: {short}
-        lore: #StringList
-        - {string}
+        lore:
+        - '{string}'
+```
+
+### Locations.yml
+```
+Lobby:
+  ==: org.bukkit.Location
+  world: world
+  x: 153.3843696362059
+  y: 71.0
+  z: 279.23702593778705
+  pitch: 6.743538
+  yaw: 358.3838
+  
+Spawns:
+  '1':
+    ==: org.bukkit.Location
+    world: world
+    x: 158.66308406253458
+    y: 71.0
+    z: 281.2793426178278
+    pitch: 8.245577
+    yaw: 359.886
+  '2':
+    ==: org.bukkit.Location
+    world: world
+    x: 156.56620838659055
+    y: 71.0
+    z: 281.48167353595807
+    pitch: 12.966307
+    yaw: 359.0274
 ```
 
 
