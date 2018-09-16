@@ -13,7 +13,7 @@ Features:
 - Super Lightweight
 
 
-#Configuration
+# Configuration
 There are overal 4 different configuration files which are handled in YAML. These configuration files are very easy to customise. The 4 files included in the plugin:
 
 - Locations.yml
