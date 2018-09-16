@@ -77,4 +77,23 @@ Spawns:
     yaw: 359.0274
 ```
 
+### Messages.yml
+```
+command-permission: You do not seem to have permissions to this command.
+command-player: You must be a player to execute this command.
+command-usage: 'Usage: &f{usage}'
+death-player: You have been killed by &c{player}
+kick-player: Thank you for playing, we hope you enjoyed.
+kill-player: You have killed &a{player}
+kit-player: You have chosen the &b{kit}&7 kit.
+lobby-false: The lobby has not been set, please contact an administrator.
+lobby-set: You have set the global lobby.
+prefix: '&e&lPVP: &7'
+reload: Reloading is not supported in this version, please restart the server.
+spawn-add: 'You have added new spawn: &b{id}'
+spawn-clear: All spawns have been cleared
+spawn-false: No spawns have been set.
+spawn-remove: 'You have removed spawn: &b{id}'
+```
+
 
