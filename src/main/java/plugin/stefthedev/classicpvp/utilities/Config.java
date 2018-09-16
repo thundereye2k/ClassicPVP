@@ -6,6 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.logging.Level;
 
 public class Config {
@@ -34,6 +36,11 @@ public class Config {
     }
 
     public void reload() {
+        config = YamlConfiguration.loadConfiguration(configFile);
+        InputStream configData = javaPlugin.getResource(name + ".yml");
+        if (configData != null) {
+            config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(configData)));
+        }
         this.config = YamlConfiguration.loadConfiguration(configFile);
     }
 

@@ -1,6 +1,6 @@
 name: ClassicPVP
 main: plugin.stefthedev.classicpvp.Main
-version: ALPHA.6
+version: ALPHA.7
 author: StefTheDev
 
 commands:

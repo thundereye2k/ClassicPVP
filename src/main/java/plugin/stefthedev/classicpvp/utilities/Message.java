@@ -14,7 +14,7 @@ public enum Message {
     LOBBY_FALSE("lobby-false", "The lobby has not been set, please contact an administrator."),
     LOBBY_SET("lobby-set", "You have set the global lobby."),
     PREFIX("prefix", "&e&lPVP: &7"),
-    RELOAD("reload", "Reloading is not supported in this version, please restart the server."),
+    RELOAD("reload", "The configuration files have been reloaded."),
     SPAWN_ADD("spawn-add", "You have added new spawn: &b{id}"),
     SPAWN_CLEAR("spawn-clear", "All spawns have been cleared"),
     SPAWN_FALSE("spawn-false", "No spawns have been set."),

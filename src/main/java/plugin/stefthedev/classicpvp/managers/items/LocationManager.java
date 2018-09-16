@@ -11,15 +11,17 @@ import java.util.Random;
 
 public class LocationManager extends Manager<Location> {
 
+    private final Main plugin;
     private Config config;
     private Location location;
 
     public LocationManager(Main plugin) {
         super(plugin);
-        this.config = plugin.getConfigManager().getElement("locations");
+        this.plugin = plugin;
     }
 
     public void serialise() {
+        this.config = plugin.getConfigManager().getElement("locations");
         location = (Location) config().get("Lobby");
         ConfigurationSection configSection = config().getConfigurationSection("Spawns");
         if(configSection == null) return;

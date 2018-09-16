@@ -60,9 +60,15 @@ public class PvPCommand implements CommandExecutor {
                     player.sendMessage(Message.PREFIX.getMessage() + Message.LOBBY_SET.getMessage());
                 } break;
                 case "reload": {
-                    plugin.getConfigManager().getList().forEach(Config::reload);
-                    plugin.getConfigManager().getList().forEach(Config::save);
+                    plugin.reloadConfig();
                     plugin.getKitManager().deserialise();
+                    plugin.getLocationManager().deserialise();
+                    plugin.getSettingsManager().deserialise();
+                    plugin.getItemManager().deserialise();
+                    plugin.getConfigManager().getList().forEach(Config::reload);
+                    plugin.getLocationManager().serialise();
+                    plugin.getSettingsManager().serialise();
+                    plugin.getItemManager().serialise();
                     plugin.getKitManager().serialise();
                     player.sendMessage(Message.PREFIX.getMessage() + Message.RELOAD.getMessage());
                 } break;

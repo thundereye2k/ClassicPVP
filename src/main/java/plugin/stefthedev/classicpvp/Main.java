@@ -8,6 +8,7 @@ import plugin.stefthedev.classicpvp.listeners.BlockListener;
 import plugin.stefthedev.classicpvp.listeners.EntityListener;
 import plugin.stefthedev.classicpvp.listeners.InventoryListener;
 import plugin.stefthedev.classicpvp.listeners.PlayerListener;
+import plugin.stefthedev.classicpvp.managers.Manager;
 import plugin.stefthedev.classicpvp.managers.items.*;
 import plugin.stefthedev.classicpvp.menus.items.KitMenu;
 import plugin.stefthedev.classicpvp.menus.items.PreviewMenu;
@@ -18,11 +19,11 @@ import java.util.Arrays;
 
 public class Main extends JavaPlugin {
 
-    private KitManager kitManager;
-    private ConfigManager configManager;
-    private LocationManager locationManager;
-    private ItemManager itemManager;
-    private SettingsManager settingsManager;
+    private final KitManager kitManager = new KitManager(this);
+    private final ConfigManager configManager = new ConfigManager(this);
+    private final LocationManager locationManager = new LocationManager(this);
+    private final ItemManager itemManager = new ItemManager(this);
+    private final SettingsManager settingsManager = new SettingsManager(this);
 
     private KitMenu kitMenu;
     private PreviewMenu previewMenu;
@@ -30,20 +31,13 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
 
-        configManager = new ConfigManager(this);
-        configManager.serialise();
-
-        kitManager = new KitManager(this);
-        kitManager.serialise();
-
-        locationManager = new LocationManager(this);
-        locationManager.serialise();
-
-        itemManager = new ItemManager(this);
-        itemManager.serialise();
-
-        settingsManager = new SettingsManager(this);
-        settingsManager.serialise();
+        managers(true,
+                configManager,
+                itemManager,
+                locationManager,
+                kitManager,
+                settingsManager
+        );
 
         registerMessages();
 
@@ -61,11 +55,13 @@ public class Main extends JavaPlugin {
     }
 
     public void onDisable() {
-        kitManager.deserialise();
-        locationManager.deserialise();
-        settingsManager.deserialise();
-        itemManager.deserialise();
-        configManager.deserialise();
+        managers(false,
+                kitManager,
+                locationManager,
+                itemManager,
+                settingsManager,
+                configManager
+        );
     }
 
     public void runAsync(Runnable runnable) {
@@ -77,6 +73,14 @@ public class Main extends JavaPlugin {
         Arrays.stream(listeners).forEach(listener -> pluginManager.registerEvents(listener, this));
     }
 
+    private void managers(boolean register, Manager... managers) {
+        if(register) {
+            Arrays.stream(managers).forEach(Manager::serialise);
+        } else {
+            Arrays.stream(managers).forEach(Manager::deserialise);
+        }
+    }
+
     private void registerMessages() {
         Config config = configManager.getElement("messages");
         Message.setFile(config.getConfig());
@@ -85,7 +89,7 @@ public class Main extends JavaPlugin {
         );
 
         config.getConfig().options().copyDefaults(true);
-        getConfigManager().getElement("messages").save();
+        config.save();
     }
 
     public ConfigManager getConfigManager() {
@@ -104,15 +108,15 @@ public class Main extends JavaPlugin {
         return itemManager;
     }
 
+    public SettingsManager getSettingsManager() {
+        return settingsManager;
+    }
+
     public KitMenu getKitMenu() {
         return kitMenu;
     }
 
     public PreviewMenu getPreviewMenu() {
         return previewMenu;
-    }
-
-    public SettingsManager getSettingsManager() {
-        return settingsManager;
     }
 }
