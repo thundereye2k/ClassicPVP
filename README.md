@@ -13,6 +13,8 @@ Features:
 - Super Lightweight
 
 
+
+
 # Configuration
 There are overal 4 different configuration files which are handled in YAML. These configuration files are very easy to customise. The 4 files included in the plugin:
 
@@ -21,58 +23,27 @@ There are overal 4 different configuration files which are handled in YAML. Thes
 - Kits.yml
 - Config.yml
 
+Kits.yml
 ```
-Settings:
-  clear-join-inventory: false
-  soup: true
-  block-break: true
-  block-place: true
-  item-drop: true
-  item-pickup: true
-  fall: true
-  hunger: true
-
-Menu:
-  kits:
-    name: 'Kits'
-    size: 27
-  preview:
-    name: 'Preview'
-    size: 54
-
-Help:
-  - '&e&lPVP Commands:'
-  - '&7Contact &bStefTheDev &7for support!'
-  - ''
-  - '  &b&l1. &7/pvp addspawn'
-  - '  &b&l2. &7/pvp delspawn'
-  - '  &b&l3. &7/pvp clearspawns'
-  - '  &b&l4. &7/pvp setlobby'
-  - '  &b&l5. &7/pvp reload'
-
-Items:
-  soup:
-    name: '&e&lShoup &7(Yummy)'
-    material: BOWL
-    subID: 0
-    lore:
-      - '&f&oClick to consume!'
-  leave:
-    name: '&c&lLeave &7(Right-Click)'
-    slot: 8
-    material: SLIME_BALL
-    amount: 1
-    subID: 0
-    lore:
-      - '&f&oClick to select!'
-  kits:
-    name: '&a&lKits &7(Right-Click)'
-    slot: 0
-    material: PISTON_BASE
-    amount: 1
-    subID: 0
-    lore:
-      - '&f&oClick to select!'
+{key}:
+   permission: {permission}
+   icon:
+     name: '{string}'
+     material: {material}
+     slot: {integer}
+     amount: {integer}
+     subID: {short}
+     lore: #StringList
+     - {string}
+   items:
+     '{id}':
+        name: '{string}'
+        material: {material}
+        slot: {integer}
+        amount: {integer}
+        subID: {short}
+        lore: #StringList
+        - {string}
 ```
 
 
