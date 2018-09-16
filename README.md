@@ -1,7 +1,7 @@
 # ClassicPVP
 An amazing, lightweight pvp experience. 100% Customisable
 
-Features:
+## Features
 - 100% Customisable
 - Optimised data Serialisation/Deserialisation
 - Kit: [Enchantment, Menu, ItemMeta Attributes removal, Slots]
@@ -12,7 +12,13 @@ Features:
 - PvP Soup
 - Super Lightweight
 
-
+## Commands
+Permissions for all commands: classicpvp.admin
+- /pvp addspawn | Add spawn points to your arena
+- /pvp delspawn | Remove spawn points from your arena.
+- /pvp setlobby | Set the global lobby for your arena.
+- /pvp clearspawns | Clear all the spawns.
+- /pvp reload | Reload the config [Buggy]
 
 
 ## Configuration
