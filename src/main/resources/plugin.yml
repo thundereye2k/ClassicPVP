@@ -1,0 +1,8 @@
+name: ClassicPVP
+main: plugin.stefthedev.classicpvp.Main
+version: ALPHA.6
+author: StefTheDev
+
+commands:
+  pvp:
+    description: PVP command.

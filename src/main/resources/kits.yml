@@ -1,0 +1,110 @@
+default:
+  permission: kit.default
+  icon:
+    name: '&e&lDefault'
+    material: DIAMOND_SWORD
+    slot: 0
+    amount: 1
+    subID: 0
+    lore:
+    - '&7The default kit offers a standard'
+    - '&7selection of resources to take'
+    - '&7into battle!'
+    - ''
+    - '&e&lItems'
+    - ' &f&l1. &7Diamond Sword &aEnchanted'
+    - ' &f&l2. &7Diamond Armor &aEnchanted'
+    - ' &f&l3. &7Apple &aGod'
+    - ''
+    - '&fLeft click to select.'
+    - '&fRight click to preview.'
+  items:
+    '1':
+      name: '&e&lDefault &7Sword'
+      material: DIAMOND_SWORD
+      slot: 0
+      amount: 1
+      subID: 0
+      enchantments:
+      - DURABILITY:1
+      lore:
+      - '&7This is the default sword'
+    '2':
+      name: '&e&lDefault &7Helmet'
+      material: DIAMOND_HELMET
+      slot: 39
+      amount: 1
+      subID: 0
+      enchantments:
+      - OXYGEN:1
+      - DEPTH_STRIDER:2
+      lore:
+      - '&7The helmet will give you an'
+      - '&7advantage on/bellow water.'
+      - ''
+      - '&e&lEnchantments:'
+      - ' &f&l1. &7Aqua Infinity &aI'
+      - ' &f&l2. &7Depth Strider &aII'
+    '3':
+      name: '&e&lDefault &7Chestplate'
+      material: DIAMOND_CHESTPLATE
+      slot: 38
+      amount: 1
+      subID: 0
+      enchantments:
+      - PROTECTION_ENVIRONMENTAL:1
+      - PROTECTION_FIRE:2
+      lore:
+      - '&7This Chestplate will protect'
+      - '&7you from fire.'
+      - ''
+      - '&e&lEnchantments:'
+      - ' &f&l1. &7Protection &aI'
+      - ' &f&l2. &7Fire Protection &aII'
+    '4':
+      name: '&e&lDefault &7Leggings'
+      material: DIAMOND_LEGGINGS
+      slot: 37
+      amount: 1
+      subID: 0
+      enchantments:
+      - PROTECTION_ENVIRONMENTAL:1
+      - PROTECTION_PROJECTILE:2
+      lore:
+      - '&7These leggings will protect'
+      - '&7you from projectiles.'
+      - ''
+      - '&e&lEnchantments:'
+      - ' &f&l1. &7Protection &aI'
+      - ' &f&l2. &7Projectile Protection &aII'
+    '5':
+      name: '&e&lDefault &7Boots'
+      material: DIAMOND_BOOTS
+      slot: 36
+      amount: 1
+      subID: 0
+      enchantments:
+      - PROTECTION_ENVIRONMENTAL:1
+      - PROTECTION_FALL:2
+      lore:
+      - '&7These boots will protect'
+      - '&7you from falling.'
+      - ''
+      - '&e&lEnchantments:'
+      - ' &f&l1. &7Protection &aI'
+      - ' &f&l2. &7Feather Falling &aII'
+    '6':
+      name: '&e&lDefault &7Apple'
+      material: GOLDEN_APPLE
+      slot: 1
+      amount: 16
+      subID: 1
+      lore:
+      - '&7This god apple will help'
+      - '&7you regain health.'
+      - ''
+      - '&e&lEffects:'
+      - ' &f&l1. &7Resistance &aI'
+      - ' &f&l2. &7Fire Resistance &aI'
+      - ' &f&l3. &7Regeneration &aII'
+      - ' &f&l4. &7Absorption &aIV'

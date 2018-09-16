@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClassicPvP">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClassicPvP</output-path>
+    <root id="archive" name="ClassicPvP.jar">
+      <element id="module-output" name="Kitpvp" />
+    </root>
+  </artifact>
+</component>
